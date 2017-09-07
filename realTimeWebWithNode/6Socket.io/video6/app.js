@@ -7,7 +7,10 @@ var io = require('socket.io')(server);
 //socket io and express are sharing the same http server
 io.on('connection', function(client){
   console.log('Client connected ...');
-
+  //to listen to messages typed into the browser
+  client.on('messages', function(data){
+    console.log(data); 
+  })
   //emitting the messages event on the client
   client.emit('messages', {hello: 'world'});
 });
