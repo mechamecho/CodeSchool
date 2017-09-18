@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body class="container" ng-controller="StoreController as store">
+    <!--Our first gem is so popular that we've run out of stock already! Well, Flatlander gems are pretty rare, so it shouldn't be a big surprise. Luckily there is a soldOut property to our gem. When a gem is soldOut, hide the .product element.-->
+    <div class="product row" ng-hide="store.product.soldOut">
+      <h3>
+        {{store.product.name}}
+        <em class="pull-right">${{store.product.price}}</em>
+      </h3>
+      <!--Use a directive to ensure that we can only see the "Add to Cart" button if the canPurchase property is true.
+-->
+      <button ng-show="store.product.canPurchase">Add to Cart</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

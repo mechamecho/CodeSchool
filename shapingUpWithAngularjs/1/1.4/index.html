@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <!--Attach the StoreController to the <body> tag. Be sure to alias it as store.-->
+  <body ng-controller="StoreController as store">
+    <div class="product row">
+      <!--Display the name of the product inside the <h3> tag.-->
+      <h3>
+        {{store.product.name}}
+        <!--Display the price of the product inside the <em> tag.-->
+        <em class="pull-right">{{store.product.price}}</em>
+      </h3>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
