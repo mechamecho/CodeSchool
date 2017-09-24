@@ -1,0 +1,24 @@
+<div class="new-note">
+  <div class="new-note-container">
+    <form class="form">
+      <fieldset>
+        <label for="title">Title</label>
+        <!--Use the ngModel directive to save the data from each form input and textarea in a model called note. Remember the data key on the model matches the form input name. Look at the description textarea in the notes/new.html template for an example.-->
+        <input name="title" ng-model='note.title' />
+      </fieldset>
+
+      <fieldset>
+        <label for="description">Description</label>
+        <textarea name="description" ng-model="note.description"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="content">Content</label>
+        <!--Use the ngModel directive to save the data from each form input and textarea in a model called note. Remember the data key on the model matches the form input name. Look at the description textarea in the notes/new.html template for an example.-->
+        <textarea name="content" ng-model='note.content'></textarea>
+      </fieldset>
+      <!--Use the ngClick directive to call the saveNote() function of the controller when the save button is clicked. Remember to pass the note model to the function.-->
+      <button class="btn" ng-click="note.saveNote(note)">Save</button>
+    </form>
+  </div>
+</div>

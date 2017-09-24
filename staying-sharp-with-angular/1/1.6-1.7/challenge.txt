@@ -1,0 +1,6 @@
+http methods:
+
+.put updating existing data
+.get retrieve data
+.post creating new data
+.delete destroy data
