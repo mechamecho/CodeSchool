@@ -1,0 +1,12 @@
+<div class="users-wrapper">
+  <h1>Users</h1>
+
+  <div class="users-wrapper">
+    <a class="card-users" ng-repeat="user in users">
+      <!--Add attributes for header and description for the nw-card directive in the notes/index.html template.
+
+The note title should be used for the header, and the note description should be used for the description.-->
+      <nw-card header='user.name' description='user.bio'></nw-card>
+    </a>
+  </div>
+</div>

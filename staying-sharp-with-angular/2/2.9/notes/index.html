@@ -1,0 +1,15 @@
+<div class="note-wrapper">
+  <div class="note-content">
+    <div class="notes-header">
+      <h1 title="Notes">Notes</h1>
+    </div>
+    <div class="note-wrapper">
+      <a class="card-notes" ng-repeat="note in notes" ng-href="#/notes/{{note.id}}">
+        <!--Add attributes for header and description for the nw-card directive in the notes/index.html template.
+
+The note title should be used for the header, and the note description should be used for the description.-->
+        <nw-card header='note.title' description='note.description'></nw-card>
+      </a>
+    </div>
+  </div>
+</div>
